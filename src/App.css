@@ -3,6 +3,17 @@
   margin: auto;
 }
 
+.rowIndex
+{
+  vertical-align:top;
+  font-weight: bold;
+}
+
+.rowData
+{
+  vertical-align:top;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

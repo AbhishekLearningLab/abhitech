@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PostItems from '../store/data.json'
+
 class Posts extends Component {
     constructor(props){
         super(props);
@@ -6,23 +8,38 @@ class Posts extends Component {
             posts:[]
         }
     }
-    componentWillMount(){
-        fetch('https://jsonplaceholder.typicode.com/posts/')
+    //https://jsonplaceholder.typicode.com/posts/
+    /*componentWillMount(){
+        fetch('http://localhost:3000/')
         .then((response) => response.json())
         .then((json) => this.setState({posts: json}))
-    }
+    }*/
     render() {
-        const postItems=this.state.posts.map(post=>(
-            <div key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-            </div>
+        const postItems=PostItems.map(post=>(
+            <tr>
+                <td scope="row" className="rowIndex">{post.id}</td>
+                <td className="rowData">{post.firstname}</td>
+                <td className="rowData">{post.surname}</td>
+                <td className="rowData">{post.email}</td>
+                <td className="rowData">{post.customer_query}</td>
+            </tr>
+            
         ));
         return (
-            <div>
-                <h1>Post Components</h1>
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Query</th>
+                </tr>
                 {postItems}
-            </div>
+            </thead>
+            <tbody>                
+            </tbody>
+            </table>
         )
     }
 }

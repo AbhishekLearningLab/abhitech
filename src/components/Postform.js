@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap';
 
 class Postform extends Component {
     render() {
         return (
             <div>
-                <h3>Add</h3>
+                <Button variant="Success">Add</Button>
             </div>
         )
     }
