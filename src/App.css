@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+th
+{
+  white-space: nowrap !important;
+}
 .rowIndex
 {
   vertical-align:top;
