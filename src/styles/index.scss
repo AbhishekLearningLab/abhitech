@@ -1,0 +1,29 @@
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+
+
+
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+  padding-top: 5rem; // 5rem= 5X16 px
+}
+
+th
+{
+  white-space: nowrap !important;
+}
+
+.rowIndex
+{
+  vertical-align:top;
+  font-weight: bold;
+}
+
+.rowData
+{
+  vertical-align:top;
+}

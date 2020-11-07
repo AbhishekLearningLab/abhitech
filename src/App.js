@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
+import { Layout } from './components/Layout';
+import Navbar from './components/elements/Navbar';
+import store from './data/store';
+import { Provider } from 'react-redux';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import QueryList from './components/queries/QueryList';
+import AddData from './components/queries/AddQuery';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Navbar></Navbar>
+          <Layout>  
+            <div className="py-3">
+              <Switch>
+              <Switch>
+                <Route exact path="/" component={QueryList} />
+                <Route exact path="/queries/add" component={AddData} />
+              </Switch>
+              </Switch>
+            </div>
+          </Layout>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
