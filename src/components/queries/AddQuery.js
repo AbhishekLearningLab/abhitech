@@ -29,7 +29,7 @@ function AddQuery() {
         if(isValid)
         {
             dispatch(addQuery(new_query));
-            history.push("/");
+            history.push("/sample1");
         }
         else
         {
