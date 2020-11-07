@@ -2,8 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 function QueryList() {
-    const queries=useSelector((state) => state.queries)
-    console.log("AAAAAAA"+queries);
+    const queries=useSelector((state) => state.queries);
     
     return (
         <table class="table table-striped">

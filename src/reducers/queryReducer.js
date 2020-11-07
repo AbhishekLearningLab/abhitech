@@ -1,8 +1,4 @@
 import initialData from '../data/Queries.json';
-import {
-    CREATE_QUERY,
-    CLEAR_QUERY
-  } from "../constant/types";
   
   const intialState = {
     queries: initialData,

@@ -6,11 +6,11 @@ const Navbar = () => {
     return (
         <nav className="navbar shadow fixed-top navbar-expand-sm navbar-dark bg-primary">
             <Container>
-                <Link to="/" className="navbar-brand">
+                <Link to="/sample1" className="navbar-brand">
                     Customer Query Book
                 </Link>
                 <div>
-                    <Link to="/queries/add" className="btn btn-light ml-auto">
+                    <Link to="/sample1/queries/add" className="btn btn-light ml-auto">
                         Add Complaints
                     </Link>
                 </div>

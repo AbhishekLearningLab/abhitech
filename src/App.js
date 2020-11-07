@@ -15,11 +15,9 @@ function App() {
           <Navbar></Navbar>
           <Layout>  
             <div className="py-3">
-              <Switch>
-              <Switch>
-                <Route exact path="/" component={QueryList} />
-                <Route exact path="/queries/add" component={AddData} />
-              </Switch>
+            <Switch>
+                <Route exact path="/sample1" component={QueryList} />
+                <Route exact path="/sample1/queries/add" component={AddData} />
               </Switch>
             </div>
           </Layout>
