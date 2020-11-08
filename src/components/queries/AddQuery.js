@@ -23,7 +23,7 @@ function AddQuery() {
             firstname: firstname,
             surname: surname,
             email: email,
-            query: query
+            customer_query: query
             };
         const isValid = formValidation();
         if(isValid)

@@ -8,9 +8,5 @@
     type: "CREATE_QUERY",
     payload: query,
   });
-  
-  // clear selected contacts
-  export const clearAllQuery = () => ({
-    type: "CLEAR_QUERY",
-  });
+ 
   

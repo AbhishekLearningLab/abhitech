@@ -1,10 +1,10 @@
 import initialData from '../data/Queries.json';
   
   const intialState = {
-    queries: initialData,
+    queries: initialData
   };
   
-  export const contactReducer = (state = intialState, action) => {
+  export const queryReducer = (state = intialState, action) => {
     switch (action.type) {
       case "CREATE_QUERY":
         return {
@@ -12,13 +12,9 @@ import initialData from '../data/Queries.json';
           queries: [action.payload, ...state.queries],
         };
         
-      case "CLEAR_QUERY":
-        return {
-          ...state,
-          selectedQueries: [],
-        };
       default:
         return state;
     }
-  };
-  
+  }; 
+
+  export default queryReducer;
